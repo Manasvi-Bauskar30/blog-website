@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechBlog - Your Gateway to Technology</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-brand">
+                <h1><i class="fas fa-blog"></i> TechBlog</h1>
+            </div>
+            
+            <!-- Navigation Menu -->
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#technology" class="nav-link">Technology</a></li>
+                    <li><a href="#programming" class="nav-link">Programming</a></li>
+                    <li><a href="#ai" class="nav-link">AI & ML</a></li>
+                    <li><a href="#web-dev" class="nav-link">Web Dev</a></li>
+                    <li><a href="#mobile" class="nav-link">Mobile</a></li>
+                </ul>
+            </nav>
+
+            <!-- Search Bar -->
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search posts..." class="search-input">
+                <button class="search-btn" onclick="searchPosts()">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <!-- Dark Mode Toggle -->
+            <button class="theme-toggle" onclick="toggleTheme()">
+                <i class="fas fa-moon" id="themeIcon"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Hero Section -->
+            <section class="hero" id="home">
+                <div class="hero-content">
+                    <h2>Welcome to TechBlog</h2>
+                    <p>Discover the latest trends in technology, programming, and innovation. Stay ahead with our expert insights and tutorials.</p>
+                    <button class="cta-button" onclick="scrollToSection('blog-posts')">Explore Posts</button>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg" alt="Technology Hero Image">
+                </div>
+            </section>
+
+            <!-- Blog Posts Section -->
+            <section class="blog-posts" id="blog-posts">
+                <h2 class="section-title">Latest Blog Posts</h2>
+                
+                <!-- Category Filter -->
+                <div class="category-filter">
+                    <button class="filter-btn active" onclick="filterPosts('all')">All</button>
+                    <button class="filter-btn" onclick="filterPosts('technology')">Technology</button>
+                    <button class="filter-btn" onclick="filterPosts('programming')">Programming</button>
+                    <button class="filter-btn" onclick="filterPosts('ai')">AI & ML</button>
+                    <button class="filter-btn" onclick="filterPosts('web-dev')">Web Dev</button>
+                    <button class="filter-btn" onclick="filterPosts('mobile')">Mobile</button>
+                </div>
+
+                <div class="posts-grid" id="postsGrid">
+                    <!-- Blog posts will be dynamically inserted here -->
+                </div>
+            </section>
+
+            <!-- Featured Post Modal -->
+            <div class="modal" id="postModal">
+                <div class="modal-content">
+                    <span class="close-modal" onclick="closeModal()">&times;</span>
+                    <div class="modal-body" id="modalBody">
+                        <!-- Post content will be inserted here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-blog"></i> TechBlog</h3>
+                    <p>Your gateway to the latest in technology and innovation.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="#technology">Technology</a></li>
+                        <li><a href="#programming">Programming</a></li>
+                        <li><a href="#ai">AI & ML</a></li>
+                        <li><a href="#web-dev">Web Development</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#blog-posts">Blog Posts</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to get the latest updates</p>
+                    <div class="newsletter">
+                        <input type="email" placeholder="Your email" class="newsletter-input">
+                        <button class="newsletter-btn">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 TechBlog. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
